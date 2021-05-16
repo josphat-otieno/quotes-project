@@ -1,9 +1,14 @@
-<p>
-    Author: {{quote.author}} <br>
-    {{quote.quote}}</p>
-<p>{{quote.upvote}}</p>
- <button (click)='upvote()'>Upvote</button>
- <p>{{quote.downvote}}</p> 
- <button (click)='downvote()'>Downvote</button>  
+<p>Author: {{quote.author}} <br>
+  {{quote.quote}}</p>
+<div class="votes">
+  <div class="upvote">
+    <p id="upvote">{{quote.upvote}}</p>
+    <button class="btn btn-success" (click)='upvote()'>Upvote</button>
+  </div>
+  <div class="downvote">
+    <p id="downvote">{{quote.downvote}}</p>
+    <button class="btn btn-outline-warning" (click)='downvote()'>Downvote</button>
+  </div>
+</div>
 <p>This post has been posted for the last {{quote.postDate|timeCount}} days </p>
-<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button> 
+<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
