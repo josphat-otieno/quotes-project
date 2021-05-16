@@ -7,8 +7,8 @@ import { Quote } from '../quote'
 })
 export class QuotesComponent implements OnInit {
   quotes:Quote[]=[
-     new Quote("jose", "Francis gachuri", "part of courage is simple consistency", new Date()),
-     new Quote ("otieno","Barack Obama", "hard work is the only way out", new Date()),
+     new Quote("jose", "Francis gachuri", "part of courage is simple consistency", new Date(2020, 11,31)),
+     new Quote ("otieno","Barack Obama", "hard work is the only way out", new Date(2021,4,15)),
      new Quote("otieno","Nelson Mandela", "education is the key", new Date())
   ];
   toggleQuotes(index){
@@ -17,7 +17,7 @@ export class QuotesComponent implements OnInit {
   }
   deleteQuote(isRead, index){
     if(isRead){
-      let toDelete = confirm('Are you sure you want to delete $(this.quotes[index].name)?')
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
       if (toDelete){
         this.quotes.splice(index, 1)
       }
