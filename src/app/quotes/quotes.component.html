@@ -1,8 +1,9 @@
 <div class="container">
   <h1>QUOTES</h1>
   <hr>
-  <div class="card">
+  
   <div class="row">
+    <div class="card card-body">
     <div class="col-md-6">
       <div *ngFor='let quote of quotes let i=index'>
         <div>
@@ -16,10 +17,11 @@
         </div>
       </div>
     </div>
+    </div>
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
-</div>
+
   <p *ngIf='quotes.length < 3'>Please add more quotes</p>
 </div>
