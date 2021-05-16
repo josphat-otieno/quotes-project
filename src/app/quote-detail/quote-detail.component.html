@@ -1,7 +1,9 @@
 <p>
     Author: {{quote.author}} <br>
     {{quote.quote}}</p>
-    
+<p>{{quote.upvote}}</p>
+ <button (click)='upvote()'>Upvote</button>
+ <p>{{quote.downvote}}</p> 
+ <button (click)='downvote()'>Downvote</button>  
 <p>This post has been posted for the last {{quote.postDate|timeCount}} days </p>
-
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button> 
