@@ -3,7 +3,7 @@ export class Quote {
     // author!:string
     // quote!:string
     showQuote:boolean;
-    constructor(public name:string, public author:string, public quote:string, public postDate:Date, public upvote:number, public downvote:number){
+    constructor(public name:string, public author:string, public quote:string, public postDate:Date, public upvote:number, public downvote:number, public currentDate:Date){
         this.showQuote=false
     }
 

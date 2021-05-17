@@ -7,9 +7,9 @@ import { Quote } from '../quote'
 })
 export class QuotesComponent implements OnInit {
   quotes:Quote[]=[
-     new Quote("jose", "Francis gachuri", "part of courage is simple consistency", new Date(2020, 11,31), 0, 0),
-     new Quote ("otieno", "Barack Obama", "hard work is the only way out", new Date(2021,4,15), 0 , 0),
-     new Quote("otieno", "Nelson Mandela", "education is the key", new Date(), 0, 0)
+     new Quote("jose", "Francis gachuri", "part of courage is simple consistency", new Date(2020, 11,31), 0, 0, new Date()),
+     new Quote ("otieno", "Barack Obama", "hard work is the only way out", new Date(2021,4,15), 0 , 0, new Date()),
+     new Quote("otieno", "Nelson Mandela", "education is the key", new Date(), 0, 0, new Date())
   ];
   toggleQuotes(index){
     this.quotes[index].showQuote=!this.quotes[index].showQuote
@@ -24,7 +24,7 @@ export class QuotesComponent implements OnInit {
     }
   }
   addNewQuote(quote){
-    let quoteLength=this.quotes.length
+    let quoteLength=this.quotes.length;
     quote.name=quote.name;
     quote.postDate=new Date(quote.postDate)
     this.quotes.push(quote)
