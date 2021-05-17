@@ -1,0 +1,15 @@
+.text-center{
+    background-color: teal;
+    color: yellow;
+}
+.labels{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: px;
+
+}
+.form-group{
+    padding-top: 10px;
+}
+.btn{
+    align-items: center;
+}
