@@ -6,4 +6,21 @@
 }
 .card{
     padding-left: 10px;
+    background-color:violet;
+    opacity: 1;
+}
+h1{
+    text-align: center;
+    background-color: violet;
+    padding: 10px 0 0 0;
+}
+.quoteName{
+    text-transform: capitalize;
+
+}
+.warning{
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 0px;
 }

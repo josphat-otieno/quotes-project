@@ -3,25 +3,23 @@
   <hr>
   <div class="row">
     <div class="col-md-6">
-      <div class="card card-success">
-      <div *ngFor='let quote of quotes let i=index'>
-        <div>
-          <h3><span class="quoteName"> {{quote.name}}</span> posted this quote on {{quote.postDate|date}}
-            <!-- Author:{{quote.author}} -->
-          </h3>
-          <button class="btn btn-primary" (click)="toggleQuotes(i)">Show Quotes</button>
+      <div class="card">
+        <div *ngFor='let quote of quotes let i=index'>
+          <div>
+            <h3><span class="quoteName"> {{quote.name}}</span> posted this quote on {{quote.postDate|date}}.</h3>
+            <button class="btn btn-primary" (click)="toggleQuotes(i)">Show Quotes</button>
+          </div>
+          <div *ngIf='quote.showQuote'>
+            <app-quote-detail [quote]='quote' (isRead)='deleteQuote($event, i)'></app-quote-detail>
+          </div>
         </div>
-        <div *ngIf='quote.showQuote'>
-          <app-quote-detail [quote]='quote' (isRead)='deleteQuote($event, i)'></app-quote-detail>
-        </div>
-      </div>
       </div>
     </div>
-    
     <div class="col-md-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
-
-  <p *ngIf='quotes.length < 3'>Please add more quotes</p>
+  <div class="warning">
+    <p *ngIf='quotes.length < 5'>Pease have at-least five quotes.</p>
+  </div>
 </div>
