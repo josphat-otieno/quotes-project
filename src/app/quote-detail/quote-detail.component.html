@@ -1,16 +1,18 @@
 <div>
 <p><span class="author">Author:</span> <span id="qauhtor" >{{quote.author}}</span> <br>
-  {{quote.quote}}</p>
+  </p>
+ <div> <p id="pquote">"{{quote.quote}}"</p></div>
 </div>
 <div class="votes">
   <div class="upvote">
     <p id="upvote">{{quote.upvote}}</p>
-    <button class="btn btn-success" (click)='upvote()'>Upvote</button>
+    <button class="btn btn-outline-success" (click)='upvote()'>Upvote</button>
   </div>
   <div class="downvote">
     <p id="downvote">{{quote.downvote}}</p>
     <button class="btn btn-outline-warning" (click)='downvote()'>Downvote</button>
   </div>
 </div>
-<p class="par">This post has been posted for the last {{quote.postDate|timeCount}} days </p>
+
+<div><p class="par">This post has been posted for the last {{quote.postDate|timeCount}} days. </p></div>
 <button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>

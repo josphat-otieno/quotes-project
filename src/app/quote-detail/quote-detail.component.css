@@ -2,19 +2,35 @@
     font-size: larger;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
+    
 }
 #qauhtor{
     text-decoration: none;
     text-transform: capitalize;
     font-style: oblique;
-
+}
+#pquote{
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
 }
 .votes{
-    padding: 10px;
+    margin: 0%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .downvote{
     margin-right: auto;
     padding-left: 10px;
+    margin-top: 0;
+}
+#upvote{
+    color: green;
+}
+#downvote{
+    color:yello;
+}
+.par{
+   
 }
