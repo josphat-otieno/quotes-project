@@ -3,7 +3,7 @@
     <hr>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" class="labels">Name</label>
             <input type="text" required class="form-control" id="name"  [(ngModel)]="newQuote.name" name="name" #name='ngModel'> 
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                 <p><strong> <em>Fill out your name</em></strong></p>
@@ -11,7 +11,7 @@
   
         </div>
         <div class="form-group">
-            <label for="author">Author</label>
+            <label for="author" class="labels">Author</label>
             <input type="text" required class="form-control" id="author"   [(ngModel)]="newQuote.author" name="author" #author='ngModel'> 
             <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
                 <p><strong> <em>Name of author is required</em></strong></p>
@@ -19,14 +19,14 @@
             
         </div>
         <div class="form-group">
-            <label for="quote">Quote</label>
+            <label for="quote" class="labels">Quote</label>
             <textarea id="quote" cols="40" rows="5" required [(ngModel)]="newQuote.quote" name="quote" #quote='ngModel' class="form-control"></textarea>
             <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger"   >
                 <p><strong> <em>Please input the quote</em></strong></p>
             </div>
         </div>
         <div class="form-group">
-            <label for="post">Post Date</label>
+            <label for="post" class="labels">Post Date</label>
             <input type="date" required class="form-control" id="post" [(ngModel)]="newQuote.postDate" name="postDate" #postDate='ngModel'> 
             <div [hidden]="postDate.valid || postDate.pristine" class="alert alert-danger">
                 <p><strong> <em>Post date is required</em></strong></p>
@@ -34,4 +34,9 @@
         </div>
         <button type="submit" class="btn btn-success">Add quote</button>
     </form>
+    <div class="footer">
+        <footer>
+            <h3>@quotes copyright (c) 2021</h3>
+        </footer>
+    </div>
 </div>
