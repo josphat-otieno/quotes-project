@@ -21,7 +21,7 @@
     align-items: center;
 }
 .downvote{
-    margin-right: 200px;
+    margin-right: 500px;
     padding-left: 10px;
     margin-top: 0;
 }
@@ -38,7 +38,7 @@
     margin-bottom: 0;
 }
 #downvote{
-    color:yello;
+    color:yellow;
     text-align: center;
     font-size: 30px;
     padding: 0;
