@@ -1,0 +1,20 @@
+.author{
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+#qauhtor{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-style: oblique;
+
+}
+.votes{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.downvote{
+    margin-right: auto;
+    padding-left: 10px;
+}
