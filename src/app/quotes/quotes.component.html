@@ -6,9 +6,9 @@
       <h2>My Quotes</h2>
       
       <div class="card">
-        <div *ngFor='let quote of quotes let i=index'>
+        <div *ngFor='let quote of quotes let i=index'><hr>
           <div>
-            <h3><span class="quoteName"> {{quote.name}}</span> posted this quote on {{quote.postDate|date}}.</h3>
+            <h3><span class="quoteName"> {{quote.name}}</span></h3>This qoute was posted on {{quote.postDate|date}}.
             <button class="btn btn-primary" (click)="toggleQuotes(i)">Show Quotes</button>
           </div>
           <div *ngIf='quote.showQuote'>

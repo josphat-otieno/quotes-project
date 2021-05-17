@@ -7,9 +7,11 @@ import { Quote } from '../quote'
 })
 export class QuotesComponent implements OnInit {
   quotes:Quote[]=[
-     new Quote("jose", "Francis gachuri", "part of courage is simple consistency", new Date(2020, 11,31), 0, 0, new Date()),
-     new Quote ("otieno", "Barack Obama", "hard work is the only way out", new Date(2021,4,15), 0 , 0, new Date()),
-     new Quote("otieno", "Nelson Mandela", "education is the key", new Date(), 0, 0, new Date())
+     new Quote("josephat otieno", "Francis gachuri", "Part of courage is simple consistency", new Date(2020, 11,31), 0, 0, new Date()),
+     new Quote ("harrison juma", "Barack Obama", "A change is brought about because ordinary people do extraordinary things.", new Date(2021,4,15), 0 , 0, new Date()),
+     new Quote("john doe", "Nelson Mandela", "Education is the key to success", new Date(2000,7,20), 0, 0, new Date()),
+     new Quote("steven achieng", "walt disney", "The way to get started is to quit talking and begin doing", new Date(2019,4,17), 0, 0, new Date()),
+     new Quote("rose", "Francis Waititu", "Mimi kitu naogopa ni Mungu na uji moto", new Date(2021,0,1), 0, 0, new Date())
   ];
   toggleQuotes(index){
     this.quotes[index].showQuote=!this.quotes[index].showQuote
