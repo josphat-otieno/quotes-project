@@ -39,4 +39,6 @@ h2{
     font-size: 20px;
     font-weight: lighter;
     font-style: italic;
+    text-shadow: yellowgreen;
+    text-decoration: tomato;
 }
